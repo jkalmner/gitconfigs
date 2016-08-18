@@ -1,0 +1,78 @@
+# HELPERS
+# -----------
+alias listalias="cat .aliases"
+alias sourcerc="source ~/.bashrc"
+#alias editalias="
+
+# MISC ALIASES
+# -----------
+alias home="cd $HOME"
+alias mine="find . -name *johan*"
+alias emacs="~/stuff/emacs/bin/emacs.exe &"
+
+alias docker_vm_start="cd $HOME/src/jenkins-dsl; docker-machine.exe start jenkins"
+alias docker_vm_ssh="echo 'Once inside docker... do this: ' ; echo '' ; echo '. /c/Users/A213139/.bashrc; cd /c/Users/A21313/src/jenkins-dsl; ./start-jenkins.sh' ; echo '' ; echo '.... then ifconfig -a to see which IP to connect to locally... for instance http://192.168.99.100:8080/'  ; docker-machine.exe ssh jenkins"
+
+
+# GIT ALIASES
+# -----------
+
+# What happened
+# -------------
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glg25="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 25"
+alias glg25r="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 25 --remotes=*"
+alias glgmy="git log --pretty=format:'%an added %h on %ar' -n 5 --author='Johan Kalmner' --since='1 month ago' --until=today"
+
+# git show <commit>
+alias gsh="git show"
+
+# Everyday work
+# ----------------
+alias gst="git status -s -b"
+alias gam="git commit --amend"
+alias gci="git commit -a -m"
+alias gco="git pull --rebase"
+
+
+# Diffing work
+# -------------
+alias gdiff_names="git diff --name-only"
+alias gdiffStagedWd="git diff"
+alias gdiffLocalStaged="git diff --cached"
+alias gdiffLocalWd="git diff HEAD"
+alias gdiffRemote="git diff origin/master"
+alias gdiffRemoteFetch="git fetch ; git diff origin/master"
+
+# Not so great... just working now...? hmm...
+alias gdiffMH="git diff master HEAD --name-only -- ."
+# same as?
+alias gch="git show HEAD --name-only"
+
+
+# difftool
+# ----------
+#git difftool --dir-diff origin/master doc2
+alias gdifftooldir="git difftool --dir-diff"
+
+
+# UNDO Stuff
+# -----------
+alias gundo_cleanWd_TODONAME="git clean -f"              # Removing view private files (not dirs?)
+
+alias gundo_modify="git checkout"                        # git checkout <file>
+alias gundo_unstageFile="git reset HEAD"                 # git reset HEAD <file>          
+alias gundo_lastCommit="git reset --soft HEAD^"          # Last commit pushed back to Index
+
+
+# Remote stuff
+# -------------
+alias gremote="git remote show origin"
+alias gremotebr="git branch -r"
+
+# branches
+# --------
+alias gbr="git branch"
+# git branch <branch-name>                      Creates a branch with <branch-name
+
+alias gls="git config --list"
