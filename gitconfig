@@ -1,0 +1,18 @@
+[core]
+	autocrlf = false
+	editor = notepad
+    excludesfile = ~/.gitignore
+[user]
+	name = Johan Kalmner
+	email = johan.kalmner@consultant.volvo.com
+[merge]
+    tool = bc4merge
+                conflictstyle = diff3
+[mergetool "bc4merge"]
+    cmd = 'C:/Program Files (x86)/Beyond Compare 4/Bcomp.exe' \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\" 
+[diff]
+                tool = bc4
+[difftool "bc4"]
+                cmd = 'C:/Program Files (x86)/Beyond Compare 4/BComp.exe' -expandall -solo \"$LOCAL\" \"$REMOTE\"
+[difftool]
+                prompt = false
